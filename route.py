@@ -1,6 +1,7 @@
 #!/bin/bash/env python 
 
 import requests
+import cid as c
 from flask import Flask, render_template, request, url_for
 
 app = Flask(__name__)
@@ -11,7 +12,7 @@ def index():
 	
 @app.route('/lookup', methods=['POST'])
 def lookup():
-		return "Phone Number"
+	name = c.returnName(request.form['entry'])
 
 @app.route('/results')
 def results():
