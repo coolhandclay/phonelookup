@@ -8,16 +8,16 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-	return "Hello World"
+	return render_template('index.html')
 	
-@app.route('/lookup', methods=['POST'])
+@app.route('/lookup', methods=['GET','POST'])
 def lookup():
-	name = c.returnName(request.form['entry'])
-
-@app.route('/results')
-def results():
-	return "Results go here"
+	if request.method == "POST":
+		name = c.returnName(request.form['entry'])
+		return render_template('results.html', name=name)
+	else:
+		return url_for('index')
 	
 
 if __name__=='__main__':
-	app.run()
+	app.run(debug=True)
