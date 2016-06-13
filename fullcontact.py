@@ -7,6 +7,9 @@ def getName(phoneNumber):
 	payload = {'phone': str(phoneNumber)}
 	url = 'https://api.fullcontact.com/v2/person.json'
 	r = requests.get(url, headers=headers, params=payload)
-	results = r.json()
-	name = results.get('contactInfo').get('fullName')
-	return name
+	if r.status_code == '200':
+		results = r.json()
+		name = results.get('contactInfo').get('fullName')
+		return name
+	else:
+		return "FC API cannot be reached right now"
