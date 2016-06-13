@@ -1,8 +1,8 @@
 <head>
-	
-
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
-<link rel="stylesheet" href="phonelookup.css">	
+<link rel="stylesheet" type="text/css" href={{ url_for('static', filename='phonelookup.css') }}>	
 <script type="text/javascript">
 
 
@@ -15,7 +15,7 @@
     <p> Find out who's calling you by entering a phone number below:</p>
   </div>
 	<form name="lookup" class="lookup-form" action="/lookup" method="post">
-  		<input class="text-entry" type="text" name="entry" pattern="[0-9]{1}">
+  		<input class="text-entry" type="text" name="entry" pattern="[0-9]+">
   		<input class="button btn btn-primary" type="submit" value="Lookup">
   	</form>
 </body>
