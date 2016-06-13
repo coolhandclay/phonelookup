@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+
+* {
+  color: white;
+  font-family: Droid Sans;
+}
+
+body {
+	background: #2F4F4F;
+}
+
+.title {
+  margin: 30px;
+}
+
+.header{
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.lookup-form {
+  text-align: center;
+  color: black;
+}
+
+.text-entry {
+  text-align: center;
+}
+
+.results {
+
+}
+
+.button {
+  
+}

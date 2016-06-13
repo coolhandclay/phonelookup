@@ -1,15 +1,21 @@
-<head></head>
-
-<script type="text/javascript">
+<head>
 	
+
+</head>
+<link rel="stylesheet" href="phonelookup.css">	
+<script type="text/javascript">
+
 
 </script>
 
 
 <body>
-	<h1>Phone Lookup</h1>
-	<form action="/lookup" method="post">
-  		<input type="text" name="entry">
-  		<input type="submit" value="Submit">
+  <div class="header">
+	<h1 class="title">Phone Lookup</h1>
+    <p> Find out who's calling you by entering a phone number below:</p>
+  </div>
+	<form name="lookup" class="lookup-form" action="/lookup" method="post">
+  		<input class="text-entry" type="text" name="entry" pattern="[0-9]{1}">
+  		<input class="button btn btn-primary" type="submit" value="Lookup">
   	</form>
 </body>
