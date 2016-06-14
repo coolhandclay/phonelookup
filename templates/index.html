@@ -1,21 +1,37 @@
 <head>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script type="text/javascript" src="phonelookup.js" ></script>
 </head>
 <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='phonelookup.css') }}>	
-<script type="text/javascript">
-
-
-</script>
-
-
+<script type="text/javascript" src="{{ url_for('static', filename='phonelookup.js') }}"></script>
 <body>
-  <div class="header">
+<div class="header">
 	<h1 class="title">Phone Lookup</h1>
     <p> Find out who's calling you by entering a phone number below:</p>
-  </div>
-	<form name="lookup" class="lookup-form" action="/lookup" method="post">
-  		<input class="text-entry" type="text" name="entry" pattern="[0-9]+">
-  		<input class="button btn btn-primary" type="submit" value="Lookup">
-  	</form>
+  </div>  
+<form name="callerid" class="lookup-form" action="/lookup" method="post">
+  +1 - 
+  <input class="text-entry" id="target1" type="text" pattern="[0-9]+" maxlength="1" size="1" onKeyUp="check(this)">
+  <input class="text-entry" id="target2" type="text" pattern="[0-9]+" maxlength="1" size="1" onKeyUp="check(this)">
+  <input class="text-entry" id="target3" type="text" pattern="[0-9]+" maxlength="1" size="1" onKeyUp="check(this)">
+  -
+  <input class="text-entry" id="target4" type="text" pattern="[0-9]+" maxlength="1" size="1" onKeyUp="check(this)">
+  <input class="text-entry" id="target5" type="text" pattern="[0-9]+" maxlength="1" size="1" onKeyUp="check(this)">
+  <input class="text-entry" id="target6" type="text" pattern="[0-9]+" maxlength="1" size="1" onKeyUp="check(this)">
+  -
+  <input class="text-entry" id="target7" type="text" pattern="[0-9]+" maxlength="1" size="1" onKeyUp="check(this)">
+  <input class="text-entry" id="target8" type="text" pattern="[0-9]+" maxlength="1" size="1" onKeyUp="check(this)">
+  <input class="text-entry" id="target9" type="text"  pattern="[0-9]+" maxlength="1" size="1" onKeyUp="check(this)">
+  <input class="text-entry" id="target10" type="text" pattern="[0-9]+" maxlength="1" size="1" onKeyUp="check(this)">
+  <input type='hidden' id='hiddenField' name ='entry' value='' />
+  <button id="target11" class="button btn btn-primary">
+  <span class="glyphicon glyphicon-search"></span>
+  </button>
+</form>
+  <button class="btn-xs btn-danger clear">
+     <span class="glyphicon glyphicon-remove"></span> Clear
+  </button>
 </body>

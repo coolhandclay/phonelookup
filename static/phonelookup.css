@@ -1,3 +1,4 @@
+
 @import url(https://fonts.googleapis.com/css?family=Droid+Sans);
 
 * {
@@ -7,6 +8,7 @@
 
 body {
 	background: #2F4F4F;
+  text-align: center;
 }
 
 .title {
@@ -25,6 +27,9 @@ body {
 
 .text-entry {
   text-align: center;
+  font-weight: bold;
+  border-radius: 25px;
+  border: 2px solid #37FDFC;
 }
 
 .results {
@@ -33,4 +38,7 @@ body {
 
 .button {
   
+}
+.clear {
+  margin-top: 20px;
 }
